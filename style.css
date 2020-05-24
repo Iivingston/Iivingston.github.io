@@ -1,70 +1,89 @@
 body {
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    margin: 0;
+}
+
+div.top {
+    background-color: white;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
+    max-height: auto;
+}
+
+header {
+    display: flex;
+    padding: 5px;
+}
+
+header > div {
+    flex-grow: 1;
+}
+
+header > h1 {
+    flex-grow: 2;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+}
+header > div:nth-of-type(2) {
+    background-image: url(search.svg);
+    background-position: 50% 50%;
+    background-size: 38%;
+    background-repeat: no-repeat;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #d3d7e1;
+}
+
+nav > div {
+    flex-grow: 1;
     display: flex;
     justify-content: center;
-    background-color: #2f2f3a;
-    font-family: 'Montserrat', sans-serif;
+    padding: 5px 0px;
 }
 
-div.chat {
+nav .active {
+    border-bottom: 2px solid black;
+}
+
+
+div.song-list {
+    padding: 5px 10px;
+}
+
+div.song-item {
+    border-bottom: 1px solid #f5f0f0;
     display: flex;
-    flex-direction: column;
-    align-self: center;
-
-    padding: 15px;
-
-    width: 500px;
-    height: 300px;
-
-    background-color: white;
-    border-radius: 7px;
-    border-bottom: 1px solid #bfb4b4;
+    margin-bottom: 3px;
+    padding: 3px 0px;
 }
 
-div.message-list {
-    display: flex;
-    flex-direction: column-reverse;
-
-
-    flex-grow: 999;
-
-    border: 1px solid #d4cccc;
-    border-radius: 4px;
-
-    margin-bottom: 10px;
-    padding: 10px;
-
-    overflow-x: hidden;
-    overflow-y: auto;
-    word-wrap: break-word;
+div.song-item span.number {
+    font-weight: 500;
+    margin-right: 15px;
 }
 
-div.message-list span {
-    font-size: 14px;
+div.song-item p.name {
+    
 }
 
-
-form {
-    display: flex;
-}
-
-.control input {
-    flex-grow: 999;
-    border: 1px solid #d4cccc;
-    border-radius: 4px;
-    height: 25px;
-    outline: none;
-    padding-left: 10px;
-    margin-right: 10px;
-}
-
-.control button {
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    width: 25px;
-    background-image: url(paper-plane.png);
-    background-repeat: no-repeat;
-    background-size: 82%;
-    background-position: 50% 50%;
-}
