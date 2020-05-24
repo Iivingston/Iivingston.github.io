@@ -69,9 +69,6 @@ nav .active {
 
 div.song-list {
     padding: 5px 10px;
-    -moz-user-select: none; /* Mozilla Firefox */
-    -ms-user-select: none; /* Internet Explorer (не поддерживается) */
-    -o-user-select: none; /* Opera Presto (не поддерживается) */
     -webkit-user-select: none; /* Google Chrome, Opera Next, Safari */
 }
 
@@ -86,6 +83,10 @@ div.song-item {
 div.song-item span.number {
     font-weight: 500;
     margin-right: 15px;
+}
+
+div.song-item p, span {
+    -webkit-user-select: none; /* Google Chrome, Opera Next, Safari */
 }
 
 
